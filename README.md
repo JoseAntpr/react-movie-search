@@ -1,1 +1,1 @@
-# React movie search - (URL)[http://mooviest-search.surge.sh/]
+# React movie search - [url](http://mooviest-search.surge.sh/)
