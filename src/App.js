@@ -1,4 +1,5 @@
 import React, { Component } from 'react';
+import { Switch, Route } from 'react-router-dom';
 
 // CSS
 import './App.css';
@@ -18,7 +19,10 @@ class App extends Component {
 
     return (
       <div className="App">
-        { Page }
+        <Switch>
+          <Route exact path='/' component={Home} />
+          <Route path='/detail/:id' component={Detail} />
+        </Switch>
       </div>
     );
   }
