@@ -1,5 +1,6 @@
 import React, { Component} from 'react';
 import { PropTypes } from 'prop-types';
+import { ButtonBackToHome } from '../components/ButtonBackToHome';
 
 const API_KEY = '21181c4d';
 
@@ -22,9 +23,6 @@ export class Detail extends Component{
                 this.setState({movie})
             });
     }
-    _goBack() {
-        window.history.back();
-    }
 
     componentDidMount() {
         console.log(this.props)
@@ -35,7 +33,7 @@ export class Detail extends Component{
         const { Title, Poster, Actors, Metascore, Plot } = this.state.movie;
         return (
             <div>
-                <button onClick={this._goBack}>Volver</button>
+                <ButtonBackToHome />
                 <h1>{Title}</h1>
                 <img src={Poster} />
                 <h3>{ Actors }</h3>
